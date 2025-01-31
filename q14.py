@@ -1,6 +1,6 @@
 def FindPalindrome(string:str):
     i=0
-    j=len(string)
+    j=len(string)-1
     while(j>=i):
         if string[i]!=string[j]:
             return False

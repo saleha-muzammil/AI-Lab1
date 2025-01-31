@@ -1,6 +1,7 @@
-def MultiplicationTable(number:int):
+def MultiplicationTable():
     for x in range(1,11):
-        print(x, '* ',number,' = ',x*number)
+        for y in range(1,11):
+            print(x, '* ',y,' = ',x*y)
 
 
-MultiplicationTable(2)
+MultiplicationTable()
