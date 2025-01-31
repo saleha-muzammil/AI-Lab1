@@ -50,18 +50,27 @@ def task5():
 def task6():
     list1 = input("Enter integers for the first list separated by space: ").split()
     list2 = input("Enter integers for the second list separated by space: ").split()
+
     list1 = [int(x) for x in list1]
     list2 = [int(x) for x in list2]
+
+    # remove duplicates by converting to set
     set1 = set(list1)
     set2 = set(list2)
-    union_set = set1.union(set2)
-    intersection_set = set1.intersection(set2)
-    difference_set1 = set1.difference(set2)
-    difference_set2 = set2.difference(set1)
+
+    # Union:---->simply add all elements of set 1 and than add only those elements from set2 which are not in union set already
+    union_set = set1.copy()
+    for item in set2:
+        if item not in union_set:
+            union_set.add(item)
     print(f"Union: {union_set}")
+
+    # Intersection:---->add an item if present in both sets
+    intersection_set = set()
+    for item in set1:
+        if item in set2:
+            intersection_set.add(item)
     print(f"Intersection: {intersection_set}")
-    print(f"Difference (set1 - set2): {difference_set1}")
-    print(f"Difference (set2 - set1): {difference_set2}")
 
 def task7():
     number = int(input("Please enter an integer: "))
@@ -294,3 +303,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
+    
