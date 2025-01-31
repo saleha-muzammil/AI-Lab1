@@ -1,0 +1,267 @@
+# Q 1
+# name = input('enter your name')
+# age = input ('enter your age')
+
+# print ('hello ' + name, 'of age ' + age)
+
+
+
+# Q2
+# x = input ("enter a number: ")
+# print ('datatype of number is ' + str(type(x)))
+# print ('in float it is ' + str(float(x)))
+
+
+
+
+# Q 3
+# mylist = ["apple", "banana", "cherry"]
+
+# print (mylist)
+
+# mylist.append('potato')
+
+# print (mylist)
+
+# mylist.remove('apple')
+
+# print (mylist)
+
+# newlist = [string.upper() for string in mylist]
+
+# print (newlist)
+
+
+
+
+# Q 4
+# fruits = ("kaila", "banana", "apple", "orange")
+
+# (arham, yellow) = fruits
+
+# print(arham)
+# print(yellow)
+
+
+
+
+# Q 5
+# thisdict = {
+
+# }
+
+# for x in range(2):
+#     name = input ('input name ')
+#     grade = input ('input grade ')
+#     thisdict[name]= grade
+#     # thisdict["name"] = name
+#     # thisdict["grade"] = grade
+    
+# print(thisdict)
+
+
+
+# Q 6
+
+# user1_input = input("user1 Enter elements separated by space: ").split()
+
+# print("List:", user1_input)
+
+# user2_input = input("user2 Enter elements separated by space: ").split()
+
+# print("List:", user2_input)
+
+# myset1 = set (user1_input)
+# myset2 = set (user2_input)
+
+# print("union intersection and difference are as follows")
+# z = myset1.union(myset2)
+# print(z)
+
+# y = myset1.intersection(myset2)
+# print(y)
+
+# x = myset1.difference(myset2)
+# print(x)
+
+
+
+
+# Q 8
+# x = input ("enter and integer ")
+# x = int(x)
+
+# if (x<0):
+#     print("negative number")
+# elif (x>0):
+#     print ("positive number")
+# else:
+#     print("number is 0")
+
+# if (x%2==0):
+#     print ("even number")
+# else:
+#     print("odd number")
+
+
+# Q 9
+# for x in range(1, 50):
+#     if x % 5 == 0 and x % 3 == 0: 
+#         print("fizzbuzz")
+#     elif x % 3 == 0:  
+#         print("fizz")
+#     elif x % 5 == 0: 
+#         print("buzz")
+#     else:
+#         print(x)
+
+# Q 10
+# def factorial (n):
+#   result= 1
+#   while (n > 0):
+#     result= result * n
+#     n = n - 1
+#   return(result)
+
+# factorial(5)
+
+
+# Q 11
+# num = int(input ('inpt a number to check if it is prime'))
+
+# flag = False
+
+# if num == 0 or num == 1:
+#     print(num, "is not a prime number")
+# elif num > 1:
+#     for i in range(2, num):
+#         if (num % i) == 0:
+#             flag = True
+#             break
+
+#     if flag:
+#         print(num, "is not a prime number")
+#     else:
+#         print(num, "is a prime number")
+
+# Q 11
+# numList = [5, 8, 9 , 0, 9]
+# newList = [x*x for x in numList]
+# print(newList)
+
+
+# # Q 12
+# d1 = {
+#     'a': 1, 
+#     'b': 2, 
+#     'c': 3
+#     }
+# d2 = {
+#     'b': 4,
+#     'd': 5
+#     }
+
+# merged_dict = d1 | d2 
+# print(merged_dict)
+
+# # Q 13
+# mylist = [4, 1, 4, 8, 9, 0]
+# mylist = list(dict.fromkeys(mylist))  #convrting to dictionaries as they dont duplicates and then back into a list
+# print(mylist)
+
+
+# Q 14
+# def is_palindrome(number):
+#    return str(number) == str(number)[::-1]
+# num = 10001
+# if is_palindrome(num):
+#    print(num,"is a palindrome.")
+# else:
+#    print(num,"is not a palindrome.")
+
+# is_palindrome = lambda num: str(num) == str(num)[::-1]
+# num = 12121
+# if is_palindrome(num):
+#    print(num,"is a palindrome.")
+# else:
+#    print(num,"is not a palindrome.")
+
+#q15
+# def fibonacci_sequence(n):
+#     sequence = []
+#     a, b = 0, 1
+#     for _ in range(n):
+#         sequence.append(a)
+#         a, b = b, a + b
+#     return sequence
+
+# # Get user input
+# n = int(input("Enter the number: "))
+# print(f"Fibonacci sequence: {fibonacci_sequence(n)}")
+
+#q18
+# def calculate_average():
+#     numbers = []
+#     while True:
+#         user_input = input("Enter a number (or 'done' to finish): ")
+#         if user_input.lower() == 'done':
+#             break
+#         number = float(user_input)
+#         numbers.append(number)
+
+    
+#     if not numbers:
+#         print("No numbers were entered.")
+#         return
+    
+#     average = sum(numbers) / len(numbers)
+#     print(f"The average of the numbers is: {average}")
+
+# calculate_average()
+
+#q19
+# def multiplication_table():
+#     for i in range(1, 11):
+#         for j in range(1, 11):
+#             print(f"{i} x {j} = {i * j}", end="\t")
+#         print() 
+
+# multiplication_table()
+
+#q20
+# def count_word_frequency():
+#     words = input("Enter a list of words separated by spaces: ").split()
+#     frequency = {}
+
+#     for word in words:
+#         if word in frequency:
+#             frequency[word] += 1
+#         else:
+#             frequency[word] = 1
+
+#     print("Word frequencies:")
+#     for word, count in frequency.items():
+#         print(f"{word}: {count}")
+
+# count_word_frequency()
+
+
+#q21
+# def temperature_converter():
+#     print("Temperature Converter")
+#     print("1. Celsius to Fahrenheit")
+#     print("2. Fahrenheit to Celsius")
+#     choice = input("Choose an option (1 or 2): ")
+
+#     if choice == '1':
+#         celsius = float(input("Enter temperature in Celsius: "))
+#         fahrenheit = (celsius * 9/5) + 32
+#         print(f"{celsius}°C is equal to {fahrenheit}°F")
+#     elif choice == '2':
+#         fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+#         celsius = (fahrenheit - 32) * 5/9
+#         print(f"{fahrenheit}°F is equal to {celsius}°C")
+#     else:
+#         print("Invalid choice. Please try again.")
+
+# temperature_converter()
