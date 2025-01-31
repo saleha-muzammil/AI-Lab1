@@ -1,6 +1,6 @@
 def square_list(lst):
     newList = []
-    for i in lst:
+    for i in range(len(lst)):
         newList.append(lst[i] * lst[i])
     return newList
 

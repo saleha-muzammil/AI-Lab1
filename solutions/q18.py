@@ -4,9 +4,9 @@ def count_words(myList):
     dictionary = {}
     for i in myList:
         if i in dictionary:
-            dict[i] += 1
+            dictionary[i] += 1
         else:
-            dict[i] = 1
+            dictionary[i] = 1
     return dictionary
 
 myList = []
