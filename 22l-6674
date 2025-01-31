@@ -1,0 +1,197 @@
+def helloPython():
+    name = input("Enter name: ")
+    age = input("Enter age: ")
+    print("Hello " + name + " who is " + age + " years old!")
+    
+def datatypeIdent():
+    var = input("Enter something: ")
+    if("." in var):
+        print("It is a float!")
+        var = float(var)
+        var = int(var)
+        print("Here it is as an integer " + str(var))
+    else:
+        print("It is an integer")
+        var = int(var)
+        var = float(var)
+        print("Here it is as a float: " + str(var))
+
+def listOperations():
+    llist = ["Hello", "I", "am", "Baasil"]
+    print(llist)
+    for element in llist:
+        print(element.upper())
+    llist.append("the")
+    llist.append("Best")
+    print(llist)
+    for element in llist:
+        print(element.upper())
+    llist.remove("Hello")
+    print(llist)
+    for element in llist:
+        print(element.upper())
+    
+def tupleUnpacking():
+    llist = ("Hello", "I", "am", "Baasil")
+    (var1, var2, *rest) = llist
+    print(var1 + " " + var2)
+
+def dictionaryManagement():
+    name1 = input("Enter name: ")
+    grade1 = input("Enter grade: ")
+    name2 = input("Enter name: ")
+    grade2 = input("Enter grade: ")
+    name3 = input("Enter name: ")
+    grade3 = input("Enter grade: ")
+    name4 = input("Enter name: ")
+    grade4 = input("Enter grade: ")
+    name5 = input("Enter name: ")
+    grade5 = input("Enter grade: ")
+    dic = dict(name = name1, grade = grade1)
+    dic.update(nametwo = name2, gradetwo = grade2)
+    dic.update(namethree = name3, gradethree = grade3)
+    dic.update(namefour = name4, gradefour = grade4)
+    dic.update(namefive = name5, gradefive = grade5)
+    print(dic)
+    
+def setOperations():
+    var1 = input("Enter number: ")
+    var2 = input("Enter number: ")
+    var3 = input("Enter number: ")
+    var4 = input("Enter number: ")
+    list1 = []
+    list2 = []
+    list1.append(int(var1))
+    list1.append(int(var2))
+    list2.append(int(var3))
+    list2.append(int(var4))
+    set1 = set(list1)
+    set2 = set(list2)
+    print("Union: " + str(set1.union(set2)))
+    print("Intersection: " + str(set1.intersection(set2)))
+    print("Difference: " + str(set1.difference(set2)))
+    
+def numberChecker():
+    num = input("Enter number: ")
+    num = int(num)
+    if(num > 0):
+        print("Number is positive")
+    elif(num < 0):
+        print("Number is negative")
+    else:
+        print("Number is 0")
+    if(num % 2 == 0):
+        print("Number is even")
+    elif(num % 2 == 1):
+        print("Number is odd")
+
+def fizzBuzz():    
+    for i in range(51):
+        if(i % 3 == 0 and i % 5 == 0 and i != 0):
+            print("FizzBuzz")
+        elif(i % 3 == 0 and i != 0):
+            print("Fizz")
+        elif(i % 5 == 0 and i != 0):
+            print("Buzz")
+        else:
+            print(i)
+
+def factorialCalculator():
+    number = input("Enter number: ")
+    number = int(number)
+    num = 1
+    for i in range(number + 1):
+        if(i != 0):
+            num = num * i
+    print("Answer: " + str(num))
+
+def primeChecker():
+    number = int(input("Enter number: "))
+    prime = True
+    for i in range(number):
+        if(prime == False):
+            break
+        if(i != 0):
+            if(number % i == 0 and i != 1):
+                prime = False
+    if(prime == True):
+        print("Number is prime!")
+    else:
+        print("Number is not prime!")
+
+def listComprehension():
+    num1 = int(input("Enter number: "))
+    num2 = int(input("Enter number: "))
+    num3 = int(input("Enter number: "))
+    num4 = int(input("Enter number: "))
+    nums = [num1, num2, num3, num4]
+    print(nums)
+    for i in range(len(nums)):
+        nums[i] = nums[i] * nums[i]
+    print(nums)
+
+def mergeDictionaries():
+    d1 = {'x': 4, 'y': 3}
+    d2 = {'y': 5, 'z': 6}
+    d1.update(d2)
+    print(d1)
+
+def removeDuplicates():
+    l1 = [1, 1, 2, 2, 3, 3]
+    print(l1)
+    l1 = list(set(l1))
+    print(l1)
+
+def palindromeChecker():
+    string = input("Enter string: ")
+    string = string.lower()
+    palindrome = lambda string: string == string[::-1]
+    answer = palindrome(string)
+    if(answer == True):
+        print("It is a palindrome")
+    else:
+        print("Not a palindrome")
+        
+def fibonnaciSequence():
+    l1 = [0, 1]
+    for i in range(10):
+        l1.append(l1[len(l1) - 1] + l1[len(l1) - 2])
+        print(l1)
+
+def averageCalculator():
+    num1 = int(input("Enter number: "))
+    num2 = int(input("Enter number: "))
+    num3 = int(input("Enter number: "))
+    num4 = int(input("Enter number: "))
+    num5 = int(input("Enter number: "))
+    print("Average: " + str((num1 + num2 + num3 + num4 + num5) / 5))
+
+def multiplicationTable():
+    for i in range(1, 11):
+        for j in range(1, 11):
+            print(str(i) + " x " + str(j)  + " = " + str(i * j))
+
+def regSystem():
+    dic = dict(Username = "Baasil", passWord = "hullabaloo")
+    userName = input("Enter Username: ")
+    passWord = input("Enter password: ")
+    if(userName in dic["Username"] and passWord in dic["passWord"]):
+        print("You have logged in!")
+    else:
+        dic.update(userName2 = userName, passWord2 = passWord)
+        print(dic)
+        print("You have registered!")
+
+def temperatureConverter():
+    typ = input("Enter C for celcius Conversion and F for Farenheit Conversion: ")
+    while(typ.lower() != "c" and typ.lower() != "f"):
+        typ = input("Enter C for celcius Conversion and F for Farenheit Conversion: ")
+    if(typ.lower() == "c"):
+        num = int(input("Enter Number: "))
+        print(str(num * (9/5) + 32))
+    else:
+        num = int(input("Enter Number: "))
+        print(str(((32*num) - 32) * (5/9)))
+
+if __name__ == "__main__":
+    temperatureConverter()
