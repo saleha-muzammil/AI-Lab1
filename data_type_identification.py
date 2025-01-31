@@ -1,7 +1,10 @@
 def main():
     user_input = input("Enter something: ")
     if user_input.isdigit():
-        print("You entered a number.")
+        if type(user_input) == float:
+            print("You entered a float.")
+        else:    
+            print("You entered an integer.")
     elif user_input.isalpha():
         print("You entered a letter.")
     else:
